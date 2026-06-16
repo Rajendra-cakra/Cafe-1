@@ -5,27 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitensteins Cafe</title>
     <link rel="icon" href="logo.png"/>
- 
-    <!-- ═══════════════════════════════════════════════
-         FILE CSS UTAMA (dari file cek.css asli kamu)
-         + Tambahan CSS untuk section menu baru
-    ═══════════════════════════════════════════════ -->
     <link rel="stylesheet" href="cdcek2.css" />
- 
-    <!-- ═══════════════════════════════════════════════
-         Google Fonts tambahan untuk section menu.
-         Font ini HANYA dipakai di section menu,
-         tidak akan mempengaruhi font di section lain.
-    ═══════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
- 
-    <!-- ═══════════════════════════════════════════════
-         NAVBAR — TIDAK DIUBAH SAMA SEKALI
-         Persis seperti file cek.html asli kamu
-    ═══════════════════════════════════════════════ -->
     <div class="navbar">
         <ul class="navbar-ul">
             <a href="#">
@@ -41,13 +25,13 @@
             <a href="#contact">contact</a>
         </ul>
 
-        <!-- TAMBAHAN: tombol hamburger -->
+        <!-- hamburger -->
         <button class="burger" id="burger" aria-label="Toggle menu">
             <span></span><span></span><span></span>
         </button>
     </div>
  
-    <!-- TAMBAHAN: drawer mobile -->
+    <!-- drawer mobile -->
     <div class="drawer" id="drawer">
         <a href="#Home" onclick="closeDrawer()">Home</a>
         <a href="#menu" onclick="closeDrawer()">Menu</a>
@@ -60,10 +44,7 @@
     <!-- NAVBAR SELESAI -->
  
  
-    <!-- ═══════════════════════════════════════════════
-         SECTION HOME (HERO) — TIDAK DIUBAH SAMA SEKALI
-         Persis seperti file cek.html asli kamu
-    ═══════════════════════════════════════════════ -->
+    <!-- Hero Section-->
     <section class="hero" id="Home">
         <div class="content-1">
             <div class="h1-judul">
@@ -99,18 +80,13 @@
             </div>
         </div>
     </section>
-    <!-- SECTION HOME SELESAI -->
+    <!-- Hero Section SELESAI -->
  
  
-    <!-- ═══════════════════════════════════════════════
-         SECTION MENU — DIGANTI TOTAL
-         Semua class di sini diawali "mn-" agar tidak
-         bentrok dengan class di cek.css yang lama.
-         Contoh: .mn-card, .mn-tab-btn, dst.
-    ═══════════════════════════════════════════════ -->
+    <!-- Menu section-->
     <section id="menu">
  
-        <!-- HEADER SECTION MENU -->
+        <!-- Header Menu Section -->
         <div class="mn-header">
             <p class="mn-label">SitenSteins Coffee House</p>
             <h2 class="mn-title">Our <em>Signature</em> Collection</h2>
@@ -118,27 +94,19 @@
             <div class="mn-divider"></div>
         </div>
  
-        <!-- NAVIGASI TAB (Best Seller / Drinks / Food / Dessert) -->
+        <!-- Tab Navigasi -->
         <nav class="mn-tab-nav">
-            <!-- data-target mengarah ke ID section yang akan ditampilkan -->
             <button class="mn-tab-btn active" data-target="mn-bestseller">★ Best Seller</button>
             <button class="mn-tab-btn" data-target="mn-drinks">Drinks</button>
             <button class="mn-tab-btn" data-target="mn-food">Food</button>
             <button class="mn-tab-btn" data-target="mn-dessert">Dessert</button>
         </nav>
- 
-        <!-- WRAPPER SEMUA KONTEN MENU -->
+
         <div class="mn-content-wrapper">
- 
-            <!-- ───────────────────────────────────────
-                 PANEL 1: BEST SELLER (5 menu)
-                 Kelas "mn-panel active" = panel yang terlihat
-            ─────────────────────────────────────── -->
             <div class="mn-panel active" id="mn-bestseller">
                 <p class="mn-sec-label">Top Picks · All Time Favorites</p>
                 <h3 class="mn-sec-title">Best Sellers</h3>
  
-                <!-- Grid kartu best seller -->
                 <div class="mn-bs-grid">
  
                     <div class="mn-bs-card">
@@ -191,18 +159,13 @@
                         <span class="mn-price">$12.00</span>
                     </div>
  
-                </div><!-- /mn-bs-grid -->
-            </div><!-- /mn-panel BEST SELLER -->
+                </div>
+            </div>
  
- 
-            <!-- ───────────────────────────────────────
-                 PANEL 2: DRINKS (10 menu)
-            ─────────────────────────────────────── -->
             <div class="mn-panel" id="mn-drinks">
                 <p class="mn-sec-label">Crafted Beverages · Premium Selection</p>
                 <h3 class="mn-sec-title">Drinks</h3>
- 
-                <!-- Grid item standar untuk drinks -->
+
                 <div class="mn-std-grid">
  
                     <div class="mn-std-item">
@@ -295,13 +258,9 @@
                         <p class="mn-card-desc">Refreshing americano infused with Japanese yuzu — bright citrus notes that elegantly balance the coffee’s bitterness.</p>
                     </div>
  
-                </div><!-- /mn-std-grid -->
-            </div><!-- /mn-panel DRINKS -->
+                </div>
+            </div>
  
- 
-            <!-- ───────────────────────────────────────
-                 PANEL 3: FOOD (10 menu)
-            ─────────────────────────────────────── -->
             <div class="mn-panel" id="mn-food">
                 <p class="mn-sec-label">Kitchen Crafted · Made to Order</p>
                 <h3 class="mn-sec-title">Food</h3>
@@ -398,14 +357,9 @@
                         <p class="mn-card-desc">Premium Indonesian fried rice with free-range chicken, emping crackers, pickles, and a sunny-side-up egg — a comforting taste of home.</p>
                     </div>
  
-                </div><!-- /mn-std-grid -->
-            </div><!-- /mn-panel FOOD -->
+                </div>
+            </div>
  
- 
-            <!-- ───────────────────────────────────────
-                 PANEL 4: DESSERT (5 menu)
-                 Layout berbeda — pakai centered card
-            ─────────────────────────────────────── -->
             <div class="mn-panel" id="mn-dessert">
                 <p class="mn-sec-label">Sweet Endings · Handcrafted</p>
                 <h3 class="mn-sec-title">Dessert</h3>
@@ -452,10 +406,10 @@
                         <span class="mn-price">$11.00</span>
                     </div>
  
-                </div><!-- /mn-dessert-grid -->
-            </div><!-- /mn-panel DESSERT -->
+                </div>
+            </div>
  
-        </div><!-- /mn-content-wrapper -->
+        </div>
     </section>
 
         
